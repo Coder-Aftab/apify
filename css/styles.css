@@ -2,8 +2,9 @@
 html {
   font-size: 62.5%;
 }
-*,*::after,*::before{
-
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 :root {
@@ -12,6 +13,8 @@ html {
   --color-accent: #ff3400;
   --color-body: #1b0760;
   --color-heading: #918ca4;
+  --color-border: #ccc;
+  --border-radius: 30px;
 }
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
@@ -205,49 +208,63 @@ a {
   background-color: #ec3000;
 }
 
-.btn--block{
+.btn--block {
   width: 100%;
   display: inline-block;
 }
 
-.btn--outline{
+.btn--outline {
   background: #fff;
   color: var(--color-body);
   border: 2px solid var(--color-heading);
 }
 
-.btn--outline:hover{
+.btn--outline:hover {
   background: var(--color-body);
   color: #fff;
 }
 
-@media screen and (min-width:1024px) {
-
-  .btn{
+@media screen and (min-width: 1024px) {
+  .btn {
     font-size: 1.5rem;
   }
 }
 
-
-
 /* Inputs */
 
-.input{
-  border-radius: 40px;
-  border: 1px solid #ccc;
+.input {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
   font-size: 2rem;
   outline: 0;
-  padding:1.5rem 3.5rem ;
+  padding: 1.5rem 3.5rem;
   text-align: left;
   color: var(--color-heading);
 }
 
-::placeholder{
+::placeholder {
   color: #cdcbd7;
 }
 
-@media screen and (min-width:1024px) {
-  .input{
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+.input-group .input{
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+}
+.input-group .btn{
+  margin: 4px;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .input {
     font-size: 1.5rem;
   }
 }
