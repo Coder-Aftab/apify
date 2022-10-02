@@ -12,8 +12,8 @@ html {
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
   --color-accent: #ff3400;
-  --color-body: #1b0760;
-  --color-heading: #918ca4;
+  --color-heading: #1b0760;
+  --color-body: #918ca4;
   --color-border: #ccc;
   --border-radius: 30px;
 }
@@ -110,6 +110,7 @@ a {
 
 .badge--small {
   font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -216,12 +217,12 @@ a {
 
 .btn--outline {
   background: #fff;
-  color: var(--color-body);
+  color: var(--color-heading);
   border: 2px solid var(--color-heading);
 }
 
 .btn--outline:hover {
-  background: var(--color-body);
+  background: var(--color-heading);
   color: #fff;
 }
 
@@ -240,7 +241,7 @@ a {
   outline: 0;
   padding: 1.5rem 3.5rem;
   text-align: left;
-  color: var(--color-heading);
+  color: var(--color-body);
 }
 
 ::placeholder {
@@ -281,22 +282,88 @@ a {
   color: #fff;
 }
 
-.card--main .card__header{
+.card--secondary .card__header {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+.card--main .card__header {
   background-color: var(--color-body);
   color: #fff;
-
 }
 .card__header,
 .card__body {
   padding: 2rem 3rem;
-
 }
 
-.card__header .card__header-price{
+.card__header .card__header-price {
   display: flex;
 }
 
-.card--primary .badge--primary{
+.card--primary .badge--primary {
   background-color: #126de4;
 }
 
+.card--secondary .badge--secondary {
+  background-color: #02cdf1;
+}
+
+/* Plans */
+
+.plan__header {
+  margin: 0;
+  color: #fff;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+.plan__price {
+  font-size: 6rem;
+}
+
+.plan__billing {
+  padding: 0.5rem 1rem;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+.plan__description {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.plan .list__item {
+  margin-bottom: 2rem;
+}
+
+/* Popular Image */
+.plan--popular .card__header {
+  position: relative;
+}
+.plan--popular .card__header::before {
+  content: url(../icons/popular.svg);
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
+
+@media screen and (min-width: 1024px) {
+  .plan__header {
+    font-size: 1.4rem;
+  }
+
+  .plan__price {
+    font-size: 5rem;
+  }
+  .plan__billing {
+    font-size: 1.6rem;
+  }
+
+  .plan__description {
+    font-size: 1.7rem;
+  }
+}
