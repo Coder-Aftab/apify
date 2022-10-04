@@ -195,7 +195,7 @@ a {
   margin: 1rem 0;
 }
 
-.btn--stretched{
+.btn--stretched {
   padding-left: 6rem;
   padding-right: 6rem;
 }
@@ -453,7 +453,6 @@ a {
   display: grid;
 }
 
-
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
@@ -463,7 +462,6 @@ a {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
   }
-
 }
 
 /* Testimonial */
@@ -495,16 +493,15 @@ a {
 
 /* Callout */
 
-
-.callout--primary{
+.callout--primary {
   background: var(--color-primary);
   color: #fff;
 }
 
-.callout__content{
+.callout__content {
   text-align: center;
 }
-.callout__heading{
+.callout__heading {
   margin-top: 0;
   color: #fff;
   font-size: 3rem;
@@ -516,60 +513,95 @@ a {
   align-self: center;
 }
 
-
-
-@media screen and (min-width:768px) {
-  .callout__content{
+@media screen and (min-width: 768px) {
+  .callout__content {
     text-align: left;
   }
-  .callout .btn{
+  .callout .btn {
     justify-self: start;
     margin: 0 2rem;
   }
 
-.callout .grid--1x2{
-  grid-template-columns: 1fr auto;
-}
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
 }
 
 /* Collapsible */
 
-
-.collapsible__header{
+.collapsible__header {
   display: flex;
   justify-content: space-between;
-
-
 }
 
-
-.collapsible__chevron{
+.collapsible__chevron {
   transform: rotate(-90deg);
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-.collapsible .collapsible__heading{
+.collapsible .collapsible__heading {
   margin-top: 0;
   font-size: 3rem;
 }
 
-.collapsible__content{
+.collapsible__content {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-.collapsible--expanded .collapsible__content{
+.collapsible--expanded .collapsible__content {
   max-height: 100vh;
   opacity: 1;
-
 }
 
-.collapsible--expanded .collapsible__chevron{
+.collapsible--expanded .collapsible__chevron {
   transform: rotate(0deg);
 }
 
-.collapsible .list{
+.collapsible .list {
   margin-top: 0;
 }
+
+/* Blocks */
+
+.block {
+  --padding-vertical:6rem;
+  padding: var(--padding-vertical) 2rem;
+  border: 2px solid gold;
+}
+
+.block--dark {
+  background: #000;
+  color: #7b858b;
+}
+
+.block__header{
+  text-align: center;
+}
+
+.block__heading {
+  margin-top: 0;
+}
+.block--dark .block__heading {
+  color: #fff;
+}
+
+.block--skewed-right{
+  clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 80%);
+  padding-bottom:10rem;
+}
+
+.block--skewed-left{
+  clip-path: polygon(0% 0%,100% 0%,100% 80%,0% 100%);
+  padding-bottom:10rem;
+}
+
+
+/* Container */
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
