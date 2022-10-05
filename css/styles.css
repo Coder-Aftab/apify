@@ -46,7 +46,10 @@ h3 {
 p {
   margin-top: 0;
 }
-
+/* make image responsive */
+img {
+  width: 100%;
+}
 /* Tablet Version */
 @media screen and (min-width: 1024px) {
   body {
@@ -332,7 +335,7 @@ a {
 
 /* Plans */
 
-.plan--popular{
+.plan--popular {
   transform: scale(1.1);
 }
 
@@ -748,7 +751,7 @@ a {
 /* Plans */
 
 .block-plans .grid {
-  gap:8rem 4rem;
+  gap: 8rem 4rem;
 }
 
 .block-plans .card {
@@ -760,4 +763,28 @@ a {
 .block-plans .card:hover {
   transform: scale(1.05, 1.05);
   box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Block */
+
+.block-features .block__heading {
+  margin: 1rem 0;
+}
+
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .block-features .feature {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .block-features .feature:nth-child(odd) .feature__content {
+    grid-row: 1;
+  }
 }
