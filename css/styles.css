@@ -332,6 +332,10 @@ a {
 
 /* Plans */
 
+.plan--popular{
+  transform: scale(1.1);
+}
+
 .plan__header {
   margin: 0;
   color: #fff;
@@ -458,7 +462,6 @@ a {
 .grid {
   display: grid;
 }
-
 
 @media screen and (min-width: 768px) {
   .grid--1x2 {
@@ -742,3 +745,19 @@ a {
   }
 }
 
+/* Plans */
+
+.block-plans .grid {
+  gap:8rem 4rem;
+}
+
+.block-plans .card {
+  margin: 0 auto;
+  max-width: 500px;
+  transition: all 1s;
+}
+
+.block-plans .card:hover {
+  transform: scale(1.05, 1.05);
+  box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.2);
+}
