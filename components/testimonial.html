@@ -1,7 +1,11 @@
 <div class="card testimonial">
   <div class="grid grid--1x2">
     <div class="testimonial__image">
-      <img src="./images/aftabphoto.jpg" alt="Md Aftab">
+      <picture>
+        <source type="image/webp" srcset="images/aftabdp.webp 1x,images/aftabdp@2.webp 2x" />
+        <source type="image/png" srcset="images/aftabdp.png 1x,images/aftabdp@2.png 2x" />
+        <img class="feature__content" src="./images/aftabdp.png" alt="Md Aftab">
+      </picture>
       <span class="icon-container icon-container--accent">
         <svg class="icon icon--white icon--small">
           <use xlink:href="../icons/sprite.svg#quotes"></use>
