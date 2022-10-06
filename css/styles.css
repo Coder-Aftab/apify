@@ -815,3 +815,34 @@ a {
 .testimonial__image img {
   max-height: 45rem;
 }
+
+/* footer block */
+
+.footer__icon {
+  max-height: 5.5rem;
+}
+
+.collapsible {
+  margin-top: 1.8rem;
+  border-bottom: 2px solid gray;
+}
+/*  Footer Block */
+
+.block-footer__logo {
+  padding: 6rem 0 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.footer__icon {
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .block-footer .footer__content {
+    max-height: 100%;
+    opacity: 1;
+    width: auto;
+  }
+  
+
+}
