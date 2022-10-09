@@ -27,7 +27,7 @@ html {
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
   color: var(--color-body);
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 1.5;
 }
 
@@ -46,8 +46,9 @@ h2 {
   font-size: 4rem;
 }
 h3 {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 p {
@@ -349,9 +350,8 @@ a {
   font-weight: 500;
   font-size: 2.4rem;
 }
-
 .plan__price {
-  font-size: 6rem;
+  font-size: 5rem;
 }
 
 .plan__billing {
@@ -389,9 +389,6 @@ a {
     font-size: 1.4rem;
   }
 
-  .plan__price {
-    font-size: 5rem;
-  }
   .plan__billing {
     font-size: 1.6rem;
   }
@@ -511,6 +508,11 @@ a {
 
 /* Callout */
 
+.callout {
+  border-radius: 5px;
+  padding: 4rem;
+}
+
 .callout--primary {
   background: var(--color-primary);
   color: #fff;
@@ -585,7 +587,7 @@ a {
 /* Blocks */
 
 .block {
-  --padding-vertical: 6rem;
+  --padding-vertical: 5rem;
   padding: var(--padding-vertical) 2rem;
 }
 
@@ -609,12 +611,12 @@ a {
 }
 
 .block--skewed-right {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
   padding-bottom: 10rem;
 }
 
 .block--skewed-left {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
   padding-bottom: 10rem;
 }
 
@@ -772,6 +774,14 @@ a {
 
 /* Features Block */
 
+.feature__content > img {
+  width: 100%;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
 .block-features .block__heading {
   margin: 1rem 0;
 }
@@ -786,7 +796,7 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .block-features .feature:nth-child(odd) .feature__content {
+  .feature:nth-child(odd) .feature__content {
     grid-row: 1;
   }
 }
@@ -809,16 +819,11 @@ a {
   }
 }
 
-/* Testimonial Block */
-
-.testimonial__image img {
-  max-height: 45rem;
-}
-
 /* footer block */
 
 .footer {
   background: #232323;
+  padding-top: 10rem;
 }
 
 .footer__section {
@@ -885,4 +890,9 @@ a {
   .footer .collapsible__chevron {
     display: none;
   }
+}
+
+/* Sign-up Callout */
+.callout-signup {
+  transform: translateY(5rem);
 }
